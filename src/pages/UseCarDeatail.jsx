@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { IMAGE } from "../constent/theme";
 import { Link } from "react-router-dom";
 import AccordianUsecar from "../element/AccordianUsecar";

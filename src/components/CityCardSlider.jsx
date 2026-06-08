@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { IMAGE } from '../constent/theme';
 import { Link } from 'react-router-dom';
-import { Autoplay } from 'swiper';
+import { Autoplay } from 'swiper/modules';
 
 
 const cards1 = [

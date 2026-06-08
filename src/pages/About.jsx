@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { IMAGE } from '../constent/theme'
 import CarlistingBanner from '../element/CarlistingBanner'
 import { Link } from 'react-router-dom';
@@ -168,7 +168,7 @@ const About = () => {
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
                             </div>
                         </div>
-                        {swiperWidth == false &&
+                        {swiperWidth === false &&
                             <div className="team-slider">
                                 <div className="swiper-wrapper row">
                                     {
@@ -201,7 +201,7 @@ const About = () => {
                         }
 
 
-                        {swiperWidth == true &&
+                        {swiperWidth === true &&
                             <Swiper className="team-slider"
                                 slidesPerView={3}
                                 spaceBetween={20}

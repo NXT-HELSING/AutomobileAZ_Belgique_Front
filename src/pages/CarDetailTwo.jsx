@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { IMAGE } from '../constent/theme'
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Link } from 'react-router-dom';
 import { SliderBlog, SocialMediaLinks } from './UseCarDeatail';
 import CommenCarSlider from '../element/CommenCarSlider'

@@ -3,7 +3,7 @@ import { IMAGE } from '../constent/theme'
 import { Link } from 'react-router-dom';
 import ModalVideo from 'react-modal-video';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination, Parallax } from 'swiper';
+import { Autoplay, Navigation, Pagination, Parallax } from 'swiper/modules';
 import Menu_2 from './Menu_2';
 
 const home4Slider = [

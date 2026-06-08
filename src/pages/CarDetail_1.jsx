@@ -1,132 +1,165 @@
-import React, { useState } from 'react'
-import { IMAGE } from '../constent/theme'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import TestimonialReting from '../element/TestimonialReting'
-import TopDeal from '../components/TopDeal'
-import ContectUs from '../components/ContectUs'
-import { FreeMode, Navigation, Thumbs } from 'swiper'
-import { Link } from 'react-router-dom'
-import { SocialMediaLinks } from './UseCarDeatail'
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { vehicleApi } from '../services/api';
 
-
-const Thumbs2 = [
-    { img: IMAGE.item1, img2: IMAGE.productThumb1 },
-    { img: IMAGE.item2, img2: IMAGE.productThumb2 },
-    { img: IMAGE.item3, img2: IMAGE.productThumb3 },
-]
 const CarDetail_1 = () => {
+    const { id } = useParams();
+    const [vehicle, setVehicle] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [selectedImage, setSelectedImage] = useState(0);
 
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    useEffect(() => {
+        const loadVehicle = async () => {
+            setLoading(true);
+            try {
+                const response = await vehicleApi.getById(id);
+                setVehicle(response.data);
+            } catch (error) {
+                console.error('Error loading vehicle:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        loadVehicle();
+        window.scrollTo({ top: 0 });
+    }, [id]);
+
+    if (loading) {
+        return (
+            <div className="page-content bg-white">
+                <div className="container py-5 text-center">
+                    <div className="spinner-border text-primary"></div>
+                    <p>Loading vehicle details...</p>
+                </div>
+            </div>
+        );
+    }
+
+    if (!vehicle) {
+        return (
+            <div className="page-content bg-white">
+                <div className="container py-5 text-center">
+                    <h3>Vehicle not found</h3>
+                    <Link to="/" className="btn btn-primary">Back to Home</Link>
+                </div>
+            </div>
+        );
+    }
 
     return (
-        <>
-            <div className="page-content bg-white theme-rounded">
-                <nav aria-label="breadcrumb" className="breadcrumb-row">
-                    <div className="container">
-                        <ul className="breadcrumb">
-                            <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                            <li className="breadcrumb-item"><Link to="/">Car Collections</Link></li>
-                            <li className="breadcrumb-item">SMART GT AA-211</li>
-                        </ul>
-                    </div>
-                </nav>
-                <section>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-7 col-lg-6 m-b40">
-                                <div className="product-gallery on-show-slider lightgallery" id="lightgallery">
-                                    <Swiper className="swiper-container sync1"
-                                        spaceBetween={10}
-                                        thumbs={{ swiper: thumbsSwiper }}
-                                        modules={[FreeMode, Navigation, Thumbs]}
-                                        speed={1200}
-                                    >
-                                        {Thumbs2.map((item, index) => (
-                                            <SwiperSlide className="swiper-slide" key={index}>
-                                                <div className="dlab-thum-bx">
-                                                    <img src={item.img} alt="" />
+        <div className="page-content bg-white theme-rounded">
+            <nav aria-label="breadcrumb" className="breadcrumb-row">
+                <div className="container">
+                    <ul className="breadcrumb">
+                        <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+                        <li className="breadcrumb-item"><Link to="/car-listing">Car Collections</Link></li>
+                        <li className="breadcrumb-item active">{vehicle.manufacturer_name} {vehicle.model}</li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xl-7 col-lg-6 m-b40">
+                            <div className="product-gallery on-show-slider lightgallery" id="lightgallery">
+                                {vehicle.images && vehicle.images.length > 0 ? (
+                                    <>
+                                        <div className="main-image mb-3">
+                                            <img 
+                                                src={vehicle.images[selectedImage]?.url} 
+                                                alt={vehicle.model}
+                                                className="img-fluid rounded"
+                                                style={{ width: '100%', height: '400px', objectFit: 'cover' }}
+                                            />
+                                        </div>
+                                        <div className="thumbnails d-flex gap-2 flex-wrap">
+                                            {vehicle.images.map((img, idx) => (
+                                                <div 
+                                                    key={idx}
+                                                    onClick={() => setSelectedImage(idx)}
+                                                    style={{ 
+                                                        width: '80px', 
+                                                        height: '80px', 
+                                                        cursor: 'pointer',
+                                                        border: selectedImage === idx ? '2px solid #0D3DE6' : '1px solid #ddd',
+                                                        borderRadius: '4px',
+                                                        overflow: 'hidden'
+                                                    }}
+                                                >
+                                                    <img 
+                                                        src={img.url} 
+                                                        alt={`${vehicle.model} ${idx + 1}`}
+                                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                                    />
                                                 </div>
-                                            </SwiperSlide>
-                                        ))}
-                                    </Swiper>
-                                    <Swiper className="swiper-container thumb-slider sync2"
-                                        onClick={setThumbsSwiper}
-                                        spaceBetween={30}
-                                        slidesPerView={3}
-                                        freeMode={true}
-                                        loop={false}
-                                        modules={[FreeMode, Navigation, Thumbs]}
-
-                                    >
-                                        {Thumbs2.map((thumbsImg, ind) => (
-                                            <SwiperSlide className="swiper-slide" key={ind} style={{ width: '179px !importent' }}>
-                                                <div className="dlab-media">
-                                                    <img className='cursorPointer' src={thumbsImg.img2} alt="" />
-                                                </div>
-                                            </SwiperSlide>
-                                        ))}
-                                    </Swiper>
-
-                                </div>
+                                            ))}
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className="bg-light text-center py-5 rounded">No images available</div>
+                                )}
                             </div>
-                            <div className="col-xl-5 col-lg-6 m-b40 m-sm-b0">
-                                <div className="sticky-top">
-                                    <div className="dlab-post-title">
-                                        <h3 className="post-title"><Link to={'#'}>SMART GT AA-211</Link></h3>
-                                        <h6 className="sub-title">SPORT CAR</h6>
-                                        <p className="m-b10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                        <div className="dlab-divider bg-gray tb15">
-                                            <i className="icon-dot c-square"></i>
-                                        </div>
+                        </div>
+                        
+                        <div className="col-xl-5 col-lg-6 m-b40">
+                            <div className="sticky-top">
+                                <div className="dlab-post-title">
+                                    <h3 className="post-title">
+                                        {vehicle.manufacturer_name} {vehicle.model}
+                                    </h3>
+                                    <h6 className="sub-title">{vehicle.submodel || 'Vehicle'}</h6>
+                                    <p className="m-b10">{vehicle.description || 'No description available.'}</p>
+                                    <div className="dlab-divider bg-gray tb15">
+                                        <i className="icon-dot c-square"></i>
                                     </div>
-                                    <div className="feature-list m-b40 m-lg-b30">
-                                        <div>
-                                            <label>Transmotion</label>
-                                            <p className="value">Automatic</p>
-                                        </div>
-                                        <div>
-                                            <label>Fuel</label>
-                                            <p className="value">Electric</p>
-                                        </div>
-                                        <div>
-                                            <label>Passenger</label>
-                                            <p className="value">2 Person</p>
-                                        </div>
+                                </div>
+                                
+                                <div className="feature-list m-b40 m-lg-b30">
+                                    <div>
+                                        <label>Year</label>
+                                        <p className="value">{vehicle.year || 'N/A'}</p>
                                     </div>
-                                    <div className="m-b40 m-lg-b30">
-                                        <span className="btn btn-primary price-btn m-b10 m-r10">$34,500</span>
-                                        <Link to="tell:224 000 22 11 33" className="btn btn-primary light shadow-none m-b10 focusBtn"><i className="fas fa-phone-volume me-3"></i>224 000 22 11 33</Link>
+                                    <div>
+                                        <label>Mileage</label>
+                                        <p className="value">{vehicle.mileage ? `${vehicle.mileage.toLocaleString()} km` : 'N/A'}</p>
                                     </div>
-                                    <div className="social-list">
-                                        <span>Share</span>
-                                        <SocialMediaLinks />
+                                    <div>
+                                        <label>Fuel</label>
+                                        <p className="value">{vehicle.fuel_type_name || 'N/A'}</p>
+                                    </div>
+                                    <div>
+                                        <label>Transmission</label>
+                                        <p className="value">{vehicle.transmission_name || 'N/A'}</p>
+                                    </div>
+                                    <div>
+                                        <label>Engine</label>
+                                        <p className="value">{vehicle.cylinder_capacity ? `${vehicle.cylinder_capacity} cc` : 'N/A'}</p>
+                                    </div>
+                                    <div>
+                                        <label>Power</label>
+                                        <p className="value">{vehicle.engine_power_hp ? `${vehicle.engine_power_hp} HP` : 'N/A'}</p>
+                                    </div>
+                                </div>
+                                
+                                <div className="m-b40 m-lg-b30">
+                                    <span className="btn btn-primary price-btn m-b10 m-r10">
+                                        €{vehicle.gross_price?.toLocaleString()}
+                                    </span>
+                                    <div className="mt-3">
+                                        <span className="text-muted">Condition: </span>
+                                        <span className={`badge ${vehicle.usage_category_id === 1 ? 'bg-success' : 'bg-info'}`}>
+                                            {vehicle.condition || (vehicle.usage_category_id === 1 ? 'New' : 'Used')}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
+        </div>
+    );
+};
 
-                <TestimonialReting />
-                {/* Top deals page */}
-                <section className="content-inner-2">
-                    <div className="container-fluid">
-                        <div className="section-head space-lg text-center">
-                            <h2 className="title">Top deals of the week</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        </div>
-                        <TopDeal />
-                    </div>
-                </section>
-                {/* Contect Us page  */}
-                <section className="content-inner">
-                    <div className="container">
-                        <ContectUs />
-                    </div>
-                </section>
-            </div>
-        </>
-    )
-}
-
-export default CarDetail_1
+export default CarDetail_1;

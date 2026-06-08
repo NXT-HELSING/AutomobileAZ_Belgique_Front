@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { IMAGE } from '../constent/theme'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper'
+import { Autoplay } from 'swiper/modules'
 import Form from 'react-bootstrap/Form'
 
 

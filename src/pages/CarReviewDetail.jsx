@@ -2,7 +2,7 @@ import React from 'react'
 import CarlistingBanner from '../element/CarlistingBanner'
 import { IMAGE } from '../constent/theme'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper'
+import { Autoplay } from 'swiper/modules'
 import ContectUs from '../components/ContectUs'
 import { Link } from 'react-router-dom'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchCarBanner from '../components/SearchCarBanner'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
+import { Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import CarBran from '../element/CarBran';
 

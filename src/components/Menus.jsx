@@ -166,18 +166,18 @@ const Menus = ({ setOpen }) => {
 
 
     useEffect(() => {
-        MenusItem.map((data) => {
-            data.subMenu.map((item) => {
+        MenusItem.forEach((data) => {
+            data.subMenu.forEach((item) => {
                 if (item.link === pathname.pathname) {
                     setActiveLink(data.menu);
                 }
-                item?.submenus?.map((el) => {
+                item?.submenus?.forEach((el) => {
                     if (el.link === pathname.pathname) {
                         setActiveLink(data.menu);
                     }
-                })
-            })
-        })
+                });
+            });
+        });
     }, [pathname.pathname])
 
 

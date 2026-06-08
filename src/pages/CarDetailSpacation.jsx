@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { IMAGE } from '../constent/theme'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper'
+import { Autoplay } from 'swiper/modules'
 import { Link } from 'react-router-dom'
 import CommenCarSlider from '../element/CommenCarSlider'
 import ContectUs from '../components/ContectUs'
