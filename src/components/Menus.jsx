@@ -3,23 +3,23 @@ import { Link, useLocation } from 'react-router-dom'
 
 export const MenusItem = [
     {
-        menu: 'HOME',
+        menu: 'ACCUEIL',
         link: '/',
     },
     {
-        menu: 'CARS',
+        menu: 'VÉHICULES',
         link: '/cars',
     },
     {
-        menu: 'COMPARE',
+        menu: 'COMPARER',
         link: '/compare-car',
     },
     {
-        menu: 'ABOUT US',
+        menu: 'À PROPOS',
         link: '/about-us',
     },
     {
-        menu: 'CONTACT US',
+        menu: 'CONTACT',
         link: '/contact-us',
     }
 ]

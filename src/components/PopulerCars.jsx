@@ -52,7 +52,7 @@ const PopulerCars = (props) => {
 
                                 )
                             })}
-                            <Link to="/popular-cars" className="btn btn-primary d-block w-100 text-center effect-1"><span>View All Popular Cars</span></Link>
+                            <Link to="/popular-cars" className="btn btn-primary d-block w-100 text-center effect-1"><span>Voir tous les véhicules</span></Link>
                         </div>
                     </div>
                     <div className="widget ads">
@@ -60,7 +60,7 @@ const PopulerCars = (props) => {
                     </div>
                     <div className="widget client-logo-wg">
                         <div className="widget-title">
-                            <h6 className="title">POPULAR CARS BY BRAND</h6>
+                            <h6 className="title">VOITURES POPULAIRES PAR MARQUE</h6>
                             <div className="dlab-separator style-1 text-primary mb-0"></div>
                         </div>
                         <ul>

@@ -9,10 +9,10 @@ const ContectUs = () => {
             <div className="row call-to-action-bx">
                 <div className="col-xl-5 col-lg-6 me-auto">
                     <div className="section-head">
-                        <h2 className="title text-white">Have any question about us?</h2>
+                        <h2 className="title text-white">Vous avez une question ? Nous sommes là pour vous.</h2>
                     </div>
-                    <Link to="tel:224000221133" className="btn btn-white me-3 mb-2"><i className="fas fa-phone-volume me-sm-3 me-0 shake"></i><span className="d-sm-inline-block d-none">224 000 22 11 33</span></Link>
-                    <Link to="/contact-us" className="btn btn-outline-white effect-1  mb-2"><span>Contact Us</span></Link>
+                    <Link to="tel:+3202251190" className="btn btn-white me-3 mb-2"><i className="fas fa-phone-volume me-sm-3 me-0 shake"></i><span className="d-sm-inline-block d-none">+32 (0)2 251 19 90</span></Link>
+                    <Link to="/contact-us" className="btn btn-outline-white effect-1  mb-2"><span>Contactez-nous</span></Link>
                 </div>
                 <div className="col-lg-6">
                     <div className="media-box">

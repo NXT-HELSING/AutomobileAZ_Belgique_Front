@@ -39,12 +39,12 @@ const Testimonial = () => {
                             <SwiperSlide className="swiper-slide" key={index}>
                                 <div className="testimonial-1 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
                                     <div className="testimonial-text">
-                                        <p>There are many variations of passages of Lorem Ipsum typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an printer took a galley of type and scrambled it to make </p>
+                                        <p>AutomobileAZ a été d'un professionnalisme exemplaire. Le véhicule était exactement comme décrit, livré clé en main sans aucune surprise. Je recommande vivement à toute la Belgique !</p>
                                     </div>
                                     <div className="testimonial-detail clearfix">
                                         <div className="testimonial-pic quote-left radius shadow">
                                             <img src={monials.img} width="100" height="100" alt="" /></div>
-                                        <strong className="testimonial-name">David Matin</strong> <span className="testimonial-position">Student</span> </div>
+                                        <strong className="testimonial-name">Marc Dupont</strong> <span className="testimonial-position">Client satisfait</span> </div>
                                 </div>
                             </SwiperSlide>)
                     })}

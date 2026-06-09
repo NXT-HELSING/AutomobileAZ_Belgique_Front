@@ -14,13 +14,12 @@ const CarDealerBanner = (props) => {
                       <div className="col-md-4">
                           <div className="selected-box">
                               <Form.Select className="form-control sm">
-                                  <option>Select Brand</option>
-                                  <option>Popular Brands</option>
+                                  <option>Sélectionner une marque</option>
+                                  <option>Marques populaires</option>
                                   <option>Honda</option>
                                   <option>Toyota</option>
-                                  <option>Mahindra</option>
-                                  <option>Tata</option>
-                                  <option>Ford</option>
+                                  <option>BMW</option>
+                                  <option>Audi</option>
                                   <option>Renault</option>
                               </Form.Select>
                           </div>
@@ -28,14 +27,16 @@ const CarDealerBanner = (props) => {
                       <div className="col-md-4 border-0">
                           <div className="selected-box">
                               <Form.Select className="form-control sm">
-                                  <option>City</option>
-                                  <option>Uk</option>
+                                  <option>Ville</option>
+                                  <option>Bruxelles</option>
+                                  <option>Anvers</option>
+                                  <option>Gand</option>
                               </Form.Select>
                           </div>
                       </div>
                       <div className="col-md-4">
                           <Link to={'#'} className="btn btn-lg effect-1 shadow-none btn-primary d-flex justify-content-between">
-                              <span className="d-flex justify-content-between w-100">FIND<i className="las la-long-arrow-alt-right"></i></span>
+                              <span className="d-flex justify-content-between w-100">RECHERCHER<i className="las la-long-arrow-alt-right"></i></span>
                           </Link>
                       </div>
                       <img className="img2 move-2" src={IMAGE.patternImg2} alt=""/>

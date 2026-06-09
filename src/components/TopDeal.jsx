@@ -24,7 +24,7 @@ const TopDeal = () => {
     };
 
     if (loading) {
-        return <div className="text-center py-5">Loading top deals...</div>;
+        return <div className="text-center py-5">Chargement des offres...</div>;
     }
 
     return (
@@ -62,11 +62,11 @@ const TopDeal = () => {
                             <span className="badge m-b30">€{vehicle.gross_price?.toLocaleString()}</span>
                             <div className="feature-list">
                                 <div>
-                                    <label>Year</label>
+                                    <label>Année</label>
                                     <p className="value">{vehicle.year || 'N/A'}</p>
                                 </div>
                                 <div>
-                                    <label>Fuel</label>
+                                    <label>Carburant</label>
                                     <p className="value">{vehicle.fuel_type_name || 'N/A'}</p>
                                 </div>
                                 <div>

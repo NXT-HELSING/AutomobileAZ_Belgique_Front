@@ -39,16 +39,16 @@ const CarListing1 = () => {
 
     return (
         <div className="page-content bg-white">
-            <CarlistingBanner img={IMAGE.bannerImg1} title={'Car Collections'} />
+            <CarlistingBanner img={IMAGE.bannerImg1} title={'Notre collection de véhicules'} />
             
             <section className="content-inner-2">
                 <div className="container">
                     <div className="row">
-                        <CarListingFilter title={'FILTER'} text={'Search your car'} />
+                        <CarListingFilter title={'FILTRES'} text={'Rechercher un véhicule'} />
                         
                         <div className="col-xl-8 col-lg-8">
                             <div className="catagory-result-row">
-                                <h5 className="serch-result">Showing <strong>{pagination.total} products</strong></h5>
+                                <h5 className="serch-result">Affichage de <strong>{pagination.total} véhicule{pagination.total > 1 ? 's' : ''}</strong></h5>
                             </div>
                             
                             {loading ? (
@@ -81,12 +81,18 @@ const CarListing1 = () => {
                                                             <p className="value text-white">{vehicle.transmission_name || 'N/A'}</p>
                                                         </div>
                                                         <div>
-                                                            <label className="text-white">Fuel</label>
+                                                            <label className="text-white">Carburant</label>
                                                             <p className="value text-white">{vehicle.fuel_type_name || 'N/A'}</p>
                                                         </div>
                                                         <div>
-                                                            <label className="text-white">Year</label>
-                                                            <p className="value text-white">{vehicle.year || 'N/A'}</p>
+                                                            <label className="text-white">Année</label>
+                                                            <p className="value text-white">
+                                                                {vehicle.first_registration_date 
+                                                                    ? new Date(vehicle.first_registration_date).getFullYear() 
+                                                                    : (vehicle.manufacturing_date 
+                                                                        ? new Date(vehicle.manufacturing_date).getFullYear() 
+                                                                        : 'N/A')}
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -100,7 +106,7 @@ const CarListing1 = () => {
                                 <nav aria-label="Page navigation" className="mt-4">
                                     <ul className="pagination justify-content-center">
                                         <li className={`page-item ${pagination.current_page === 1 ? 'disabled' : ''}`}>
-                                            <button className="page-link" onClick={() => handlePageChange(pagination.current_page - 1)}>Previous</button>
+                                            <button className="page-link" onClick={() => handlePageChange(pagination.current_page - 1)}>Précédent</button>
                                         </li>
                                         {[...Array(pagination.last_page)].map((_, i) => (
                                             <li key={i} className={`page-item ${pagination.current_page === i + 1 ? 'active' : ''}`}>
@@ -108,7 +114,7 @@ const CarListing1 = () => {
                                             </li>
                                         ))}
                                         <li className={`page-item ${pagination.current_page === pagination.last_page ? 'disabled' : ''}`}>
-                                            <button className="page-link" onClick={() => handlePageChange(pagination.current_page + 1)}>Next</button>
+                                            <button className="page-link" onClick={() => handlePageChange(pagination.current_page + 1)}>Suivant</button>
                                         </li>
                                     </ul>
                                 </nav>

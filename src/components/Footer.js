@@ -14,8 +14,8 @@ const Footer = () => {
                   <div className="footer-logo">
                     <img src={IMAGE.logo1} alt="" />
                   </div>
-                  <h5 className="m-b20">Best car dealer in europe</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h5 className="m-b20">Votre spécialiste voiture d'occasion en Belgique</h5>
+                  <p>Depuis 1993, AutomobileAZ vous propose une sélection rigoureuse de véhicules d'occasion contrôlés et garantis, à Meise et dans toute la Belgique.</p>
                   <ul className="social-list style-1">
                     <li><Link to="https://www.youtube.com/"><i className="fab fa-youtube"></i></Link></li>
                     <li><Link to="https://www.linkedin.com/"><i className="fab fa-linkedin"></i></Link></li>
@@ -28,28 +28,26 @@ const Footer = () => {
               <div className="col-lg-3 col-md-6 col-sm-6">
                 <div className="widget widget_categories p-l50">
                   <div className="widget-title">
-                    <h5 className="title">Quick Links</h5>
+                    <h5 className="title">Liens rapides</h5>
                   </div>
                   <ul>
-                    <li className="cat-item"><Link to="/contact-us">Contact us</Link></li>
-                    <li className="cat-item"><Link to="/car-listing">Products</Link></li>
-                    <li className="cat-item"><Link to='/latest-cars'>Latest car</Link></li>
-                    <li className="cat-item"><Link to={'/blog-list-sidebar'}>Blog list</Link></li>
-                    <li className="cat-item"><Link to={'/blog-details'}>Blog detail</Link></li>
+                    <li className="cat-item"><Link to="/contact-us">Contactez-nous</Link></li>
+                    <li className="cat-item"><Link to="/car-listing">Nos véhicules</Link></li>
+                    <li className="cat-item"><Link to="/about-us">À propos</Link></li>
+                    <li className="cat-item"><Link to="/used-car-search">Recherche avancée</Link></li>
                   </ul>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 col-sm-6" >
                 <div className="widget widget_categories">
                   <div className="widget-title">
-                    <h5 className="title">Support</h5>
+                    <h5 className="title">Informations</h5>
                   </div>
                   <ul>
-                    <li className="cat-item"><Link to="/about-us">About us</Link></li>
-                    <li className="cat-item"><Link to={'/services'}>Services</Link></li>
-                    <li className="cat-item"><Link to={'/location'}>Location</Link></li>
-                    <li className="cat-item"><Link to={'/error-404'}>Error 404</Link></li>
-                    <li className="cat-item"><Link to="/used-car-search">Search car</Link></li>
+                    <li className="cat-item"><Link to="/about-us">À propos de nous</Link></li>
+                    <li className="cat-item"><Link to="/contact-us">Nos services</Link></li>
+                    <li className="cat-item"><Link to="/contact-us">Notre localisation</Link></li>
+                    <li className="cat-item"><Link to="/car-listing">Stock disponible</Link></li>
 
                   </ul>
                 </div>
@@ -68,7 +66,7 @@ const Footer = () => {
                       </span>
                     </div>
                     <div className="icon-content">
-                      <p>77 Highfield Road London N36 7SB</p>
+                      <p>Veilinglaan 18, 1861 Meise, Belgique</p>
                     </div>
                   </div>
                   <div className="icon-bx-wraper style-2">
@@ -80,7 +78,7 @@ const Footer = () => {
                       </span>
                     </div>
                     <div className="icon-content">
-                      <p>412 444 1124</p>
+                      <p>+32 (0)2 251 19 90</p>
                     </div>
                   </div>
                 </div>
@@ -93,7 +91,7 @@ const Footer = () => {
           <div className="container">
             <div className="row align-items-center fb-inner spno">
               <div className="col-12 text-center">
-                <span className="copyright-text">Copyright © 2023 <Link to="https://dexignlab.com/" className="text-primary" target="_blank">DexignLabs</Link> All rights reserved.</span>
+                <span className="copyright-text">Copyright © 2025 <strong>AutomobileAZ</strong> – Veilinglaan 18, 1861 Meise – Tous droits réservés.</span>
               </div>
             </div>
           </div>

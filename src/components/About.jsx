@@ -14,10 +14,10 @@ const About = () => {
             </div>
             <div className="col-lg-7 align-self-center" >
                 <div className="section-head">
-                    <h6 className="text-primary sub-title">ABOUT</h6>
-                    <h2 className="title">About the Mobhi</h2>
+                    <h6 className="text-primary sub-title">À PROPOS</h6>
+                    <h2 className="title">À propos d’AutomobileAZ</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                <p>Implanté à Meise et actif à Vilvoorde, AutomobileAZ est un garage familial belge fondé en 1993. Nous achetons, contrôlons et vendons des voitures d’occasion avec transparence. Pas de mauvaise surprise : chaque véhicule est inspecté, révisé et garanti.</p>
                <AboutSlider/>
             </div>
         </div>

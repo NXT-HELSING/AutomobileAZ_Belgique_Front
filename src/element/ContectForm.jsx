@@ -12,7 +12,7 @@ const ContectForm = () => {
                       <div className="row sp10">
                           <div className="col-sm-6">
                               <div className="form-group">
-                                  <label>Full Name</label>
+                                  <label>Nom complet</label>
                                   <div className="input-group">
                                       <input type="text" required className="form-control" name="dzName" placeholder="" />
                                   </div>
@@ -20,7 +20,7 @@ const ContectForm = () => {
                           </div>
                           <div className="col-sm-6">
                               <div className="form-group">
-                                  <label>Email</label>
+                                  <label>E-mail</label>
                                   <div className="input-group">
                                       <input type="text" required className="form-control" name="dzEmail" placeholder="" />
                                   </div>
@@ -28,7 +28,7 @@ const ContectForm = () => {
                           </div>
                           <div className="col-sm-12">
                               <div className="form-group">
-                                  <label>Subject</label>
+                                  <label>Sujet</label>
                                   <div className="input-group">
                                       <input type="text" required className="form-control" name="dzOther[subject]" placeholder="" />
                                   </div>
@@ -49,7 +49,7 @@ const ContectForm = () => {
                               </div>
                           </div>
                           <div className="col-sm-12">
-                              <button name="submit" type="submit" value="submit" className="btn btn-primary w-100 d-block btn-rounded">SEND MESSAGE </button>
+                              <button name="submit" type="submit" value="submit" className="btn btn-primary w-100 d-block btn-rounded">ENVOYER LE MESSAGE</button>
                           </div>
                       </div>
                   </form>

@@ -31,7 +31,7 @@ const Header = () => {
                             {/* <!-- Extra Nav --> */}
                             <div className="extra-nav">
                                 <div className="extra-cell">
-                                    <Link to="tel:224000221133" className="btn btn-primary light phone-no shadow-none effect-1 focusBtn"><span><i className="fas fa-phone-volume shake"></i>224 000 22 11 33</span></Link>
+                                    <Link to="tel:+3202251190" className="btn btn-primary light phone-no shadow-none effect-1 focusBtn"><span><i className="fas fa-phone-volume shake"></i>+32 (0)2 251 19 90</span></Link>
                                 </div>
                             </div>
                             <div className={`header-nav navbar-collapse collapse justify-content-center ${addOpen === true ? 'show' : ''}`} id="navbarNavDropdown">

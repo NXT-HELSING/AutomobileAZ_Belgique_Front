@@ -7,25 +7,25 @@ import { Link } from 'react-router-dom'
 import { Form } from 'react-bootstrap'
 
 const cards = [
-    { heading: "Add to compare" },
-    { heading: "Add to compare" },
-    { heading: "Add to compare" },
-    { heading: "Add to compare" },
+    { heading: "Ajouter à la comparaison" },
+    { heading: "Ajouter à la comparaison" },
+    { heading: "Ajouter à la comparaison" },
+    { heading: "Ajouter à la comparaison" },
 ]
 
 const ComapeCar = () => {
     return (
         <>
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr2} title={'Add Cars To Compare'} />
+                <CarlistingBanner img={IMAGE.bnr2} title={'Comparer des véhicules'} />
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
                                 <div className="m-b30">
-                                    <h3 className="m-t0">Compare to choose the right car! </h3>
+                                    <h3 className="m-t0">Comparez pour choisir le véhicule idéal !</h3>
                                     <ul className="used-car-dl-info">
-                                        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+                                        <li>Chez AutomobileAZ, nous vous aidons à trouver le véhicule qui correspond parfaitement à vos besoins et à votre budget.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -49,29 +49,29 @@ const ComapeCar = () => {
                                                 <h6 className="m-b15">{card.heading}</h6>
                                                 <div className="input-group m-b20">
                                                     <Form.Select className="form-control sm borderNone">
-                                                        <option>-Select Brand-</option>
-                                                        <option>Maruti</option>
-                                                        <option>Hyundai</option>
-                                                        <option>Honda</option>
-                                                        <option>Toyota</option>
+                                                        <option>-Sélectionner une marque-</option>
+                                                        <option>BMW</option>
+                                                        <option>Audi</option>
+                                                        <option>Volkswagen</option>
+                                                        <option>Renault</option>
                                                     </Form.Select>
                                                 </div>
                                                 <div className="input-group m-b20">
                                                     <Form.Select className="form-control sm borderNone">
-                                                        <option>-Select Model-</option>
-                                                        <option>Creta</option>
-                                                        <option>Elantra</option>
-                                                        <option>EON</option>
-                                                        <option>Grand i10</option>
+                                                        <option>-Sélectionner un modèle-</option>
+                                                        <option>Série 3</option>
+                                                        <option>Série 5</option>
+                                                        <option>A4</option>
+                                                        <option>Golf</option>
                                                     </Form.Select>
                                                 </div>
                                                 <div className="input-group">
                                                     <Form.Select className="form-control sm borderNone">
-                                                        <option>-Select Variant-</option>
-                                                        <option>Creta</option>
-                                                        <option>Elantra</option>
-                                                        <option>EON</option>
-                                                        <option>Grand i10</option>
+                                                        <option>-Sélectionner une finition-</option>
+                                                        <option>Confort</option>
+                                                        <option>Business</option>
+                                                        <option>Sport</option>
+                                                        <option>Luxe</option>
                                                     </Form.Select>
                                                 </div>
                                             </form>
@@ -80,13 +80,13 @@ const ComapeCar = () => {
                                 )
                             })}
                             <div className="col-12 text-center">
-                                <Link to="/compare-result" className="btn btn-primary">Compare Now</Link>
+                                <Link to="/compare-result" className="btn btn-primary">Comparer maintenant</Link>
                             </div>
                         </div>
                     </div>
                 </section>
                 {/* =========Car slider >>>>>> */}
-                <CommenCarSlider title={"Similar Car Comparisons"} />
+                <CommenCarSlider title={"Comparaisons similaires"} />
                 {/* ======================Contect Us page >>> */}
                 <section className="content-inner">
                     <div className="container">

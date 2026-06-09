@@ -7,7 +7,7 @@ const Contect = () => {
     return (
         <>
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr1} title={'Contact'} />
+                <CarlistingBanner img={IMAGE.bnr1} title={'Contactez-nous'} />
                 <section className="content-inner bg-gray bottom-shape">
                     <div className="container">
                         <div className="row">
@@ -18,9 +18,9 @@ const Contect = () => {
                                             <path d="M24 28.4375C24 26.0217 22.2087 24.0625 20 24.0625H18C13.5813 24.0625 10 27.9795 10 32.8125V39.375C10 44.208 13.5813 48.125 18 48.125H20C22.2087 48.125 24 46.1658 24 43.75V28.4375ZM46 48.125C50.4188 48.125 54 44.208 54 39.375V32.8125C54 27.9795 50.4188 24.0625 46 24.0625H44C41.7912 24.0625 40 26.0217 40 28.4375V43.75C40 46.1658 41.7912 48.125 44 48.125H46ZM32 0C14.1475 0 0.5725 16.2463 0 35V37.1875C0 38.3961 0.895 39.375 2 39.375H4C5.105 39.375 6 38.3961 6 37.1875V35C6 19.3197 17.6637 6.5625 32 6.5625C46.3363 6.5625 58 19.3197 58 35H57.985C57.995 35.3322 58 57.657 58 57.657C58 60.8494 55.6338 63.4375 52.715 63.4375H40C40 59.8131 37.3138 56.875 34 56.875H30C26.6863 56.875 24 59.8131 24 63.4375C24 67.0619 26.6863 70 30 70H52.715C58.9475 70 64 64.4738 64 57.657V35C63.4275 16.2463 49.8525 0 32 0Z" fill="white" />
                                         </svg>
                                     </div>
-                                    <h2 className="title">Let’s Talk</h2>
+                                    <h2 className="title">Parlons-en</h2>
                                 </div>
-                                <p className="m-b50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                                <p className="m-b50">Notre équipe est à votre disposition du lundi au samedi pour répondre à toutes vos questions sur nos véhicules d'occasion. N'hésitez pas à nous contacter ou à venir directement nous rendre visite à Meise.</p>
                                 <div className="row">
                                     <div className="col-sm-6 m-b20">
                                         <div className="icon-bx-wraper style-2">
@@ -32,7 +32,7 @@ const Contect = () => {
                                                 </span>
                                             </div>
                                             <div className="icon-content">
-                                                <p>77 Highfield Road London N36 7SB</p>
+                                                <p>Veilinglaan 18, 1861 Meise, Belgique</p>
                                             </div>
                                         </div>
                                     </div>
@@ -46,13 +46,86 @@ const Contect = () => {
                                                 </span>
                                             </div>
                                             <div className="icon-content">
-                                                <p>412 444 1124</p>
+                                                <p>+32 (0)2 251 19 90</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 m-b20">
+                                        <div className="icon-bx-wraper style-2">
+                                            <div className="icon-bx-sm radius">
+                                                <span className="icon-cell">
+                                                    <i className="fas fa-envelope" style={{fontSize:'16px'}}></i>
+                                                </span>
+                                            </div>
+                                            <div className="icon-content">
+                                                <p>info@automobileaz.be</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 m-b20">
+                                        <div className="icon-bx-wraper style-2">
+                                            <div className="icon-bx-sm radius">
+                                                <span className="icon-cell">
+                                                    <i className="fas fa-clock" style={{fontSize:'16px'}}></i>
+                                                </span>
+                                            </div>
+                                            <div className="icon-content">
+                                                <p>Lun–Sam : 9h00 – 18h00</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <ContectForm />
+                        </div>
+                    </div>
+                </section>
+
+                {/* Google Maps Section */}
+                <section className="content-inner-2 p-0">
+                    <div className="container-fluid p-0">
+                        <div className="map-section" style={{ width: '100%', height: '450px', position: 'relative' }}>
+                            <iframe
+                                title="AutomobileAZ Localisation"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.097413802946!2d4.320827!3d50.943611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3dba63d7ac9c9%3A0xf58ab2cc1aed3c2f!2sVeilinglaan%2018%2C%201861%20Meise%2C%20Belgium!5e0!3m2!1sfr!2sbe!4v1700000000000!5m2!1sfr!2sbe"
+                                width="100%"
+                                height="450"
+                                style={{ border: 0, display: 'block' }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                            {/* Overlay card */}
+                            <div style={{
+                                position: 'absolute',
+                                top: '20px',
+                                left: '20px',
+                                background: 'white',
+                                borderRadius: '12px',
+                                padding: '20px 24px',
+                                boxShadow: '0 4px 24px rgba(0,0,0,0.15)',
+                                zIndex: 10,
+                                minWidth: '240px'
+                            }}>
+                                <h5 style={{ marginBottom: '8px', fontWeight: 700 }}>AutomobileAZ</h5>
+                                <p style={{ margin: 0, color: '#666', fontSize: '14px' }}>
+                                    <i className="fas fa-map-marker-alt text-primary me-2"></i>
+                                    Veilinglaan 18, 1861 Meise
+                                </p>
+                                <p style={{ margin: '4px 0 0', color: '#666', fontSize: '14px' }}>
+                                    <i className="fas fa-phone text-primary me-2"></i>
+                                    +32 (0)2 251 19 90
+                                </p>
+                                <a
+                                    href="https://maps.app.goo.gl/Jyz6RoUz2pTZ2ggz8"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn btn-primary btn-sm mt-3 d-block text-center"
+                                    style={{ borderRadius: '8px' }}
+                                >
+                                    Itinéraire →
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>

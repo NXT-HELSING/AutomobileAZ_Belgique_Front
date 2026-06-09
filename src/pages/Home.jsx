@@ -54,14 +54,14 @@ const Home = () => {
                 <section className="content-inner-2">
                     <div className="container-fluid">
                         <div className="section-head space-lg text-center">
-                            <h2 className="title">Top deals of the week</h2>
-                            <p>Browse our latest vehicles fresh from the market. Click on any car to see full details.</p>
+                            <h2 className="title">Bonnes affaires de la semaine</h2>
+                            <p>Parcourez nos derniers arrivages. Cliquez sur une voiture pour voir tous les détails.</p>
                         </div>
                         
                         {loading ? (
                             <div className="text-center py-5">
                                 <div className="spinner-border text-primary" role="status">
-                                    <span className="visually-hidden">Loading...</span>
+                                    <span className="visually-hidden">Chargement...</span>
                                 </div>
                             </div>
                         ) : featuredVehicles.length > 0 ? (
@@ -86,15 +86,15 @@ const Home = () => {
                                                         {vehicle.manufacturer_name} {vehicle.model}
                                                     </Link>
                                                 </h4>
-                                                <div className="car-type">{vehicle.category_name || 'Vehicle'}</div>
+                                                <div className="car-type">{vehicle.category_name || 'Véhicule'}</div>
                                                 <span className="badge m-b30">€{vehicle.gross_price?.toLocaleString()}</span>
                                                 <div className="feature-list">
                                                     <div>
-                                                        <label>Year</label>
-                                                        <p className="value">{vehicle.year || 'N/A'}</p>
+                                                        <label>Année</label>
+                                                        <p className="value">{vehicle.first_registration_date ? new Date(vehicle.first_registration_date).getFullYear() : 'N/A'}</p>
                                                     </div>
                                                     <div>
-                                                        <label>Fuel</label>
+                                                        <label>Carburant</label>
                                                         <p className="value">{vehicle.fuel_type_name || 'N/A'}</p>
                                                     </div>
                                                     <div>
@@ -123,15 +123,15 @@ const Home = () => {
                                                 <div className="feature-list">
                                                     <div>
                                                         <label>Transmission</label>
-                                                        <p className="value">Automatic</p>
+                                                        <p className="value">Automatique</p>
                                                     </div>
                                                     <div>
-                                                        <label>Fuel</label>
-                                                        <p className="value">Electric</p>
+                                                        <label>Carburant</label>
+                                                        <p className="value">Électrique</p>
                                                     </div>
                                                     <div>
-                                                        <label>Passenger</label>
-                                                        <p className="value">2 Person</p>
+                                                        <label>Places</label>
+                                                        <p className="value">2 Personnes</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -142,11 +142,11 @@ const Home = () => {
                         )}
                         
                         <div className="text-center mt-4">
-                            <Link to="/car-listing" className="btn btn-primary">View All Vehicles</Link>
+                            <Link to="/cars" className="btn btn-primary">Voir tous les véhicules</Link>
                         </div>
                     </div>
                 </section>
-                
+
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="row features-box">

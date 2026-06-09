@@ -43,16 +43,16 @@ const LatestCarSider = () => {
                                     <span className="badge m-b30">$34,500</span>
                                     <div className="feature-list">
                                         <div>
-                                            <label>Transmotion</label>
-                                            <p className="value">Automatic</p>
+                                            <label>Transmission</label>
+                                            <p className="value">Automatique</p>
                                         </div>
                                         <div>
-                                            <label>Fuel</label>
-                                            <p className="value">Electric</p>
+                                            <label>Carburant</label>
+                                            <p className="value">Électrique</p>
                                         </div>
                                         <div>
-                                            <label>Passenger</label>
-                                            <p className="value">2 Person</p>
+                                            <label>Passagers</label>
+                                            <p className="value">2 Personnes</p>
                                         </div>
                                     </div>
                                 </div>

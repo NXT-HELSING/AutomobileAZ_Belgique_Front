@@ -10,11 +10,11 @@ const CarFeatures = () => {
         <div className="col-lg-6 align-self-center m-b30">
           <div className="content-box">
             <div className="section-head">
-              <h6 className="sub-title style-1">We Bring You to The Future</h6>
-              <h2 className="title">Don’t worries, we check all of unit</h2>
+              <h6 className="sub-title style-1">Nous vous accompagnons vers l'avenir</h6>
+              <h2 className="title">Soyez serein, chaque véhicule est contrôlé</h2>
             </div>
-            <p className="m-b40">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-            <Link to="/about-us" className="btn btn-primary effect-1"><span>Discover More</span></Link>
+            <p className="m-b40">Chez AutomobileAZ, chaque véhicule d'occasion est soigneusement inspecté avant d'être mis en vente. Nous garantissons la qualité et la fiabilité de notre sélection pour vous offrir une expérience d'achat en toute confiance, à Meise et dans toute la Belgique.</p>
+            <Link to="/about-us" className="btn btn-primary effect-1"><span>En savoir plus</span></Link>
           </div>
         </div>
         <CarFuturSlide />

@@ -18,7 +18,7 @@ const CarListingFilter = (props) => {
                         <div className="widget widget_search">
                             <div className="form-group search-bx m-b20">
                                 <div className="input-group">
-                                    <input name="text" className="form-control" placeholder="Enter your keywords..." type="text" />
+                                    <input name="text" className="form-control" placeholder="Entrez votre recherche..." type="text" />
                                     <span className="input-group-btn">
                                         <button type="submit" className="btn shadow-none"><i className="la la-search scale3"></i></button>
                                     </span>
@@ -26,27 +26,28 @@ const CarListingFilter = (props) => {
                             </div>
                             <div className="form-group m-b20">
                                 <Form.Select className="form-control cursorPointer borderNone">
-                                    <option>Choose Brand</option>
-                                    <option>Maruti</option>
-                                    <option>Hyundai</option>
-                                    <option>Honda</option>
+                                    <option>Choisir une marque</option>
+                                    <option>BMW</option>
+                                    <option>Audi</option>
+                                    <option>Volkswagen</option>
                                 </Form.Select>
                             </div>
                             <div className="form-group">
                                 <Form.Select className="form-control cursorPointer borderNone">
-                                    <option>Choose Class</option>
-                                    <option>First</option>
-                                    <option>Luxury</option>
+                                    <option>Choisir une catégorie</option>
+                                    <option>Citadine</option>
+                                    <option>Berline</option>
+                                    <option>Luxe</option>
                                 </Form.Select>
                             </div>
                         </div>
 
                         <div className="widget widget_product_tag">
                             <div className="d-flex justify-content-between m-b20 align-items-center">
-                                <h5>Model</h5>
+                                <h5>Modèle</h5>
                                 <div className="form-check style-1">
                                     <input type="checkbox" className="form-check-input" id="checkAll" />
-                                    <label className="form-check-label" htmlFor="checkAll">Select All</label>
+                                    <label className="form-check-label" htmlFor="checkAll">Tout sélectionner</label>
                                 </div>
                             </div>
                             <div className="btn-group product-tag-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -66,7 +67,7 @@ const CarListingFilter = (props) => {
 
 
                         <div className="widget widget_price_range">
-                            <h5>Price range</h5>
+                            <h5>Fourchette de prix</h5>
 
                             <MultiRangeSlider
                                 min={0}
@@ -78,31 +79,32 @@ const CarListingFilter = (props) => {
                         <div className="widget">
                             <div className="form-group m-b20">
                                 <Form.Select className="form-control cursorPointer borderNone">
-                                    <option>Any fuel</option>
-                                    <option>1 liter</option>
-                                    <option>2 liter</option>
-                                    <option>3 liter</option>
+                                    <option>Tout carburant</option>
+                                    <option>Essence</option>
+                                    <option>Diesel</option>
+                                    <option>Hybride</option>
+                                    <option>Électrique</option>
                                 </Form.Select>
                             </div>
                             <div className="form-group m-b20">
                                 <Form.Select className="form-control cursorPointer borderNone">
-                                    <option>Colour</option>
-                                    <option>Black</option>
-                                    <option>White</option>
-                                    <option>Red</option>
-                                    <option>Green</option>
+                                    <option>Couleur</option>
+                                    <option>Noir</option>
+                                    <option>Blanc</option>
+                                    <option>Rouge</option>
+                                    <option>Vert</option>
                                 </Form.Select>
                             </div>
                             <div className="form-group m-b30">
                                 <Form.Select className="form-control cursorPointer borderNone">
-                                    <option>Transmision</option>
-                                    <option>auto</option>
-                                    <option>manual</option>
+                                    <option>Transmission</option>
+                                    <option>Automatique</option>
+                                    <option>Manuelle</option>
                                 </Form.Select>
                             </div>
                             <div className="form-group">
                                 <Link to={'#'} className="btn btn-lg shadow-none btn-primary d-flex justify-content-between cursorUnsate">
-                                    FIND CARS<i className="las la-long-arrow-alt-right"></i>
+                                    RECHERCHER<i className="las la-long-arrow-alt-right"></i>
                                 </Link>
                             </div>
                         </div>
