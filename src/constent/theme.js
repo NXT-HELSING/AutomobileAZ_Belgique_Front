@@ -1,6 +1,6 @@
 export const IMAGE = {
-    logo1: require('../assets/images/logo.png'),
-    logo2: require('../assets/images/logo-2.png'),
+    logo1: require('../assets/images/logo_primary.png'),
+    logo2: require('../assets/images/logo_primary.png'),
     slide_pic1: require('../assets/images/main-slider/pic1.jpg'),
     slide_pic2: require('../assets/images/main-slider/pic2.jpg'),
     slide_pic3: require('../assets/images/main-slider/pic3.jpg'),
