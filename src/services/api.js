@@ -19,4 +19,8 @@ export const vehicleApi = {
     autocomplete: (query) => api.get('/vehicles/search/autocomplete', { params: { query } }),
 };
 
+export const contactApi = {
+    send: (data) => api.post('/contact', data),
+};
+
 export default api;
