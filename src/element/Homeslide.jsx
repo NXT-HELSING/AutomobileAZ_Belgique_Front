@@ -33,15 +33,15 @@ const Homeslide = (props) => {
                                     <div className="silder-content">
                                         <div className="inner-content">
                                             <div className="left">
-                                                <p className="car-type">SPORT CAR</p>
-                                                <p className="car-name slide-vertical" data-splitting >Porce 123 GT</p>
+                                                <p className="car-type">SPORT</p>
+                                                <p className="car-name slide-vertical" data-splitting >Porsche 911 Carrera</p>
                                             </div>
                                             <div className="right">
-                                                <p className="price-label">Starting at </p>
-                                                <p className="car-price" data-splitting >$ 20,500</p>
+                                                <p className="price-label">À partir de </p>
+                                                <p className="car-price" data-splitting>€ 120 000</p>
                                             </div>
                                         </div>
-                                        <Link to="/car-listing" data-splitting className="discover-link">DISCOVER MORE</Link>
+                                        <Link to="/car-listing" data-splitting className="discover-link">DÉCOUVRIR</Link>
                                     </div>
                                     <div className="slider-img" >
                                         <img src={slide.imag1} alt="" />
@@ -50,6 +50,7 @@ const Homeslide = (props) => {
                             </SwiperSlide>
                         ))
                     }
+               
 
                     <div className="slider-one-pagination">
                         <div className="btn-prev swiper-button-prev1 cursorPointer"
