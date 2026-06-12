@@ -25,6 +25,7 @@ import Home from './pages/Home';
 import CarListing1 from './pages/CarListing1';
 import CarDetail1 from './pages/CarDetail_1';
 import ComapeCar from './pages/ComapeCar';
+import CompareResult from './pages/CompareResult';
 import About from './pages/About';
 import Contect from './pages/Contect';
 import Error404 from './pages/Error404';
@@ -67,8 +68,9 @@ function App() {
                             <Route path="/car-details" element={<CarDetail1 />} />
                             <Route path="/car-details/:id" element={<CarDetail1 />} />
                             
-                            {/* Compare route */}
+                            {/* Compare routes */}
                             <Route path="/compare-car" element={<ComapeCar />} />
+                            <Route path="/compare-result" element={<CompareResult />} />
                             
                             {/* Info routes */}
                             <Route path="/about" element={<About />} />

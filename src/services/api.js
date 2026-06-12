@@ -15,6 +15,8 @@ export const vehicleApi = {
     getById: (id) => api.get(`/vehicles/${id}`),
     getBySlug: (slug) => api.get(`/vehicles/slug/${slug}`),
     getFilterOptions: () => api.get('/vehicles/filter-options'),
+    getCompareOptions: () => api.get('/vehicles/compare-options'),
+    compare: (ids) => api.get('/vehicles/compare', { params: { ids } }),
     search: (query) => api.post('/vehicles/search', { query }),
     autocomplete: (query) => api.get('/vehicles/search/autocomplete', { params: { query } }),
 };
