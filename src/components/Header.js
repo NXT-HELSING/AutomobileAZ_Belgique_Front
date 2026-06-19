@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Menus from './Menus'
 import { IMAGE } from '../constent/theme'
 import { Link } from 'react-router-dom';
+import LanguageSelector from './LanguageSelector';
 
 const Header = () => {
 
@@ -30,8 +31,9 @@ const Header = () => {
                             </button>
                             {/* <!-- Extra Nav --> */}
                             <div className="extra-nav">
-                                <div className="extra-cell">
+                                <div className="extra-cell d-flex align-items-center">
                                     <Link to="tel:+3202251190" className="btn btn-primary light phone-no shadow-none effect-1 focusBtn"><span><i className="fas fa-phone-volume shake"></i>+32 (0)2 251 19 90</span></Link>
+                                    <LanguageSelector />
                                 </div>
                             </div>
                             <div className={`header-nav navbar-collapse collapse justify-content-center ${addOpen === true ? 'show' : ''}`} id="navbarNavDropdown">

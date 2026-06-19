@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { TranslateProvider } from 'react-google-translate-mj';
+import AutoTranslateDOM from './components/AutoTranslateDOM';
 
 // css imports
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -53,39 +55,42 @@ function App() {
 
     return (
         <HelmetProvider>
-            <Router>
-                <div className="page-wraper">
-                    <Routes>
-                        <Route element={<Layout />}>
-                            <Route path="/" element={<Home />} />
-                            
-                            {/* Car Listing routes */}
-                            <Route path="/cars" element={<CarListing1 />} />
-                            <Route path="/car-listing" element={<CarListing1 />} />
-                            
-                            {/* Car Details routes */}
-                            <Route path="/vehicle/:id" element={<CarDetail1 />} />
-                            <Route path="/car-details" element={<CarDetail1 />} />
-                            <Route path="/car-details/:id" element={<CarDetail1 />} />
-                            
-                            {/* Compare routes */}
-                            <Route path="/compare-car" element={<ComapeCar />} />
-                            <Route path="/compare-result" element={<CompareResult />} />
-                            
-                            {/* Info routes */}
-                            <Route path="/about" element={<About />} />
-                            <Route path="/about-us" element={<About />} />
-                            <Route path="/contact" element={<Contect />} />
-                            <Route path="/contact-us" element={<Contect />} />
-                            
-                            {/* Error Route */}
-                            <Route path="/error-404" element={<Error404 />} />
-                            <Route path="*" element={<Error404 />} />
-                        </Route>
-                    </Routes>
-                    <ScrollTop />
-                </div>
-            </Router>
+            <TranslateProvider defaultLanguage="fr">
+                <AutoTranslateDOM />
+                <Router>
+                    <div className="page-wraper">
+                        <Routes>
+                            <Route element={<Layout />}>
+                                <Route path="/" element={<Home />} />
+                                
+                                {/* Car Listing routes */}
+                                <Route path="/cars" element={<CarListing1 />} />
+                                <Route path="/car-listing" element={<CarListing1 />} />
+                                
+                                {/* Car Details routes */}
+                                <Route path="/vehicle/:id" element={<CarDetail1 />} />
+                                <Route path="/car-details" element={<CarDetail1 />} />
+                                <Route path="/car-details/:id" element={<CarDetail1 />} />
+                                
+                                {/* Compare routes */}
+                                <Route path="/compare-car" element={<ComapeCar />} />
+                                <Route path="/compare-result" element={<CompareResult />} />
+                                
+                                {/* Info routes */}
+                                <Route path="/about" element={<About />} />
+                                <Route path="/about-us" element={<About />} />
+                                <Route path="/contact" element={<Contect />} />
+                                <Route path="/contact-us" element={<Contect />} />
+                                
+                                {/* Error Route */}
+                                <Route path="/error-404" element={<Error404 />} />
+                                <Route path="*" element={<Error404 />} />
+                            </Route>
+                        </Routes>
+                        <ScrollTop />
+                    </div>
+                </Router>
+            </TranslateProvider>
         </HelmetProvider>
     );
 }
