@@ -10,7 +10,25 @@ const AutoTranslateDOM = () => {
         const isDefault = currentLanguage === defaultLanguage || !currentLanguage;
         let active = true;
 
+        const isNoTranslate = (node) => {
+            let current = node;
+            while (current) {
+                if (current.nodeType === Node.ELEMENT_NODE) {
+                    if (current.getAttribute && current.getAttribute('data-no-translate') === 'true') {
+                        return true;
+                    }
+                    if (current.classList && current.classList.contains('no-translate')) {
+                        return true;
+                    }
+                }
+                current = current.parentNode;
+            }
+            return false;
+        };
+
         const translateNode = async (node) => {
+            if (isNoTranslate(node)) return;
+
             if (node.__originalText === undefined) {
                 node.__originalText = node.nodeValue || '';
             }
@@ -42,7 +60,7 @@ const AutoTranslateDOM = () => {
         };
 
         const walkAndTranslate = (element) => {
-            if (!element) return;
+            if (!element || isNoTranslate(element)) return;
             const ignoredTags = ['SCRIPT', 'STYLE', 'NOSCRIPT', 'IFRAME', 'TEXTAREA', 'INPUT', 'SELECT', 'OPTION'];
             if (ignoredTags.includes(element.tagName)) return;
 

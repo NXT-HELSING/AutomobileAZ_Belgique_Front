@@ -3,9 +3,9 @@ import { useTranslator } from 'react-google-translate-mj';
 import { Dropdown } from 'react-bootstrap';
 
 const languages = [
-    { code: 'fr', label: 'Français', flag: '🇫🇷' },
-    { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'nl', label: 'Nederlands', flag: '🇳🇱' }
+    { code: 'fr', label: 'Français', flag: 'https://flagcdn.com/w40/fr.png' },
+    { code: 'en', label: 'English', flag: 'https://flagcdn.com/w40/gb.png' },
+    { code: 'nl', label: 'Nederlands', flag: 'https://flagcdn.com/w40/nl.png' }
 ];
 
 const LanguageSelector = () => {
@@ -15,7 +15,7 @@ const LanguageSelector = () => {
     const selectedLang = languages.find(lang => lang.code === currentLangCode) || languages[0];
 
     return (
-        <Dropdown className="language-selector-dropdown d-inline-block ms-3">
+        <Dropdown className="language-selector-dropdown no-translate d-inline-block ms-3" data-no-translate="true">
             <Dropdown.Toggle 
                 variant="light" 
                 id="dropdown-language"
@@ -33,7 +33,18 @@ const LanguageSelector = () => {
                     cursor: 'pointer'
                 }}
             >
-                <span className="me-2" style={{ fontSize: '16px' }}>{selectedLang.flag}</span>
+                <img 
+                    src={selectedLang.flag} 
+                    alt={selectedLang.label} 
+                    style={{ 
+                        width: '20px', 
+                        height: '14px', 
+                        borderRadius: '2px', 
+                        objectFit: 'cover',
+                        boxShadow: '0 1px 2px rgba(0,0,0,0.1)'
+                    }} 
+                    className="me-2"
+                />
                 <span className="d-none d-sm-inline me-1">{selectedLang.label}</span>
             </Dropdown.Toggle>
 
@@ -60,7 +71,18 @@ const LanguageSelector = () => {
                             cursor: 'pointer'
                         }}
                     >
-                        <span className="me-2" style={{ fontSize: '16px' }}>{lang.flag}</span>
+                        <img 
+                            src={lang.flag} 
+                            alt={lang.label} 
+                            style={{ 
+                                width: '20px', 
+                                height: '14px', 
+                                borderRadius: '2px', 
+                                objectFit: 'cover',
+                                boxShadow: '0 1px 2px rgba(0,0,0,0.1)'
+                            }} 
+                            className="me-2"
+                        />
                         <span>{lang.label}</span>
                     </Dropdown.Item>
                 ))}
