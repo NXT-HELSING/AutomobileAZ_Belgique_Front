@@ -1,7 +1,6 @@
 import React from 'react';
 import { IMAGE } from '../constent/theme';
 import CarlistingBanner from '../element/CarlistingBanner';
-import ContectUs from '../components/ContectUs';
 import ShowroomSection from '../components/ShowroomSection';
 
 const progressCard = [
@@ -79,11 +78,6 @@ const About = () => {
                 {/* ✦ REBUILT Showroom Section ✦ */}
                 <ShowroomSection />
 
-                <section className="content-inner">
-                    <div className="container">
-                        <ContectUs />
-                    </div>
-                </section>
             </div>
         </>
     );
