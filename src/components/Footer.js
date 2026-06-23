@@ -91,7 +91,7 @@ const Footer = () => {
           <div className="container">
             <div className="row align-items-center fb-inner spno">
               <div className="col-12 text-center">
-                <span className="copyright-text">Copyright © 2025 <strong>AutomobileAZ</strong> – Veilinglaan 18, 1861 Meise – Tous droits réservés.</span>
+                <span className="copyright-text">Copyright © 2026 <strong>AutomobileAZ</strong> – Veilinglaan 18, 1861 Meise – Tous droits réservés.</span>
               </div>
             </div>
           </div>
