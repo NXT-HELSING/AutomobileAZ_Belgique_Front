@@ -20,8 +20,8 @@ const Header = () => {
                     <div className="main-bar clearfix" style={{ transition: 'all .5s' }}>
                         <div className="container clearfix">
                             {/* <!-- Website Logo --> */}
-                            <div className="logo-header mostion logo-dark">
-                                <Link to={'/'}><img src={IMAGE.logo1} alt="" /></Link>
+                            <div className="logo-header mostion logo-dark" style={{ maxWidth: '160px', padding: '4px 0' }}>
+                                <Link to={'/'}><img src={IMAGE.logo1} alt="AutomobileAZ" style={{ height: '104px', width: 'auto' }} /></Link>
                             </div>
                             {/* <!-- Nav Toggle Button --> */}
                             <button onClick={() => { addOpen === false ? setOpen(true) : setOpen(false) }} className={`navbar-toggler collapsed navicon justify-content-end ${addOpen === true ? 'open' : ''}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

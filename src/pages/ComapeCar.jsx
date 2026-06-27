@@ -4,7 +4,6 @@ import CarlistingBanner from '../element/CarlistingBanner';
 import CompareSlot from '../element/CompareSlot';
 import { IMAGE } from '../constent/theme';
 import CommenCarSlider from '../element/CommenCarSlider';
-import ContectUs from '../components/ContectUs';
 import { vehicleApi } from '../services/api';
 
 const emptySlot = () => ({ manufacturer: '', model: '', vehicleId: '' });
@@ -106,11 +105,6 @@ const ComapeCar = () => {
 
             <CommenCarSlider title="Comparaisons similaires" />
 
-            <section className="content-inner">
-                <div className="container">
-                    <ContectUs />
-                </div>
-            </section>
         </div>
     );
 };

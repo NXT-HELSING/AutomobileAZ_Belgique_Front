@@ -44,10 +44,6 @@ const Homebanner = () => {
         <>
             <div className="col-lg-6">
                 <div className="banner-content-area">
-                    <div className="trending-text">
-                        <span className="badge badge-primary">TENDANCE</span>
-                        <span>BMW Série 3</span>
-                    </div>
                     <img className="pattern-img move-1" src={IMAGE.patternImg} alt="" />
                     <h1 className="title" style={{ fontSize: '2.5rem', lineHeight: '1.2' }}>Bienvenue chez AutomobileAZ – Spécialiste de la voiture d'occasion en Belgique</h1>
                     <p>Plus de 30 ans d'expérience (depuis 1993). Véhicules contrôlés, garantis et livrés clé en main.<br />Découvrez notre sélection rigoureuse de voitures d'occasion à Meise, Vilvoorde et toute la Belgique.</p>

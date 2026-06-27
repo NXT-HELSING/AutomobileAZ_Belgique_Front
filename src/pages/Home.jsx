@@ -44,12 +44,7 @@ const Home = () => {
                     </div>
                 </section>
                 
-                <section className="content-inner-2">
-                    <div className="container">
-                        <CarFeatures />
-                    </div>
-                </section>
-                
+
                 {/* Top Deals Section - Dynamic from API */}
                 <section className="content-inner-2">
                     <div className="container-fluid">
@@ -144,6 +139,12 @@ const Home = () => {
                         <div className="text-center mt-4">
                             <Link to="/cars" className="btn btn-primary">Voir tous les véhicules</Link>
                         </div>
+                    </div>
+                </section>
+
+                <section className="content-inner-2">
+                    <div className="container">
+                        <CarFeatures />
                     </div>
                 </section>
 
