@@ -17,6 +17,7 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 php artisan optimize:clear
+php artisan storage:link --force
 
 # Permissions
 chmod -R 775 storage bootstrap/cache
@@ -31,6 +32,12 @@ npm run build:prod
 
 # Copy to web root
 cp -r build/* /var/www/clients/client1/web3/web/
+
+# Ensure storage link exists in the web root pointing to the backend storage
+if [ ! -L /var/www/clients/client1/web3/web/storage ]; then
+    echo "🔗 Creating web root storage symlink..."
+    ln -s /var/www/clients/client1/web3/web/AutomobileAZ_Belgique_BK/storage/app/public /var/www/clients/client1/web3/web/storage
+fi
 
 # Restart services
 systemctl reload nginx
