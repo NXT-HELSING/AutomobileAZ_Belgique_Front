@@ -2,6 +2,10 @@
 
 echo "🚀 Deploying AutomobileAZ..."
 
+# Fix Git ownership warnings on VPS
+git config --global --add safe.directory /var/www/clients/client1/web3/web/AutomobileAZ_Belgique_BK
+git config --global --add safe.directory /var/www/clients/client1/web3/web/AutomobileAZ_Belgique_Front
+
 cd /var/www/clients/client1/web3/web/AutomobileAZ_Belgique_BK
 
 # Backend
@@ -22,7 +26,7 @@ chown -R www-data:www-data storage bootstrap/cache
 echo "📦 Updating React..."
 cd ../AutomobileAZ_Belgique_Front
 git pull
-npm install
+npm install --legacy-peer-deps
 npm run build:prod
 
 # Copy to web root
