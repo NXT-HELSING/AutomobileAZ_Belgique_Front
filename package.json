@@ -33,6 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:prod": "REACT_APP_API_URL=http://automobileaz.be/api/v1 npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
