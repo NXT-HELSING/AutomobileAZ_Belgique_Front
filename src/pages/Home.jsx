@@ -142,11 +142,13 @@ const Home = () => {
                     </div>
                 </section>
 
+                {/* CarFeatures section — hidden per request
                 <section className="content-inner-2">
                     <div className="container">
                         <CarFeatures />
                     </div>
                 </section>
+                */}
 
                 <section className="content-inner-2">
                     <div className="container">
