@@ -45,7 +45,7 @@ const Homebanner = () => {
             <div className="col-lg-6">
                 <div className="banner-content-area">
                     <img className="pattern-img move-1" src={IMAGE.patternImg} alt="" />
-                    <h1 className="title" style={{ fontSize: '2.5rem', lineHeight: '1.2' }}>Bienvenue chez AutomobileAZ – Spécialiste de la voiture d'occasion en Belgique</h1>
+                    <h1 className="title" style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', lineHeight: '1.2' }}>Bienvenue chez AutomobileAZ – Spécialiste de la voiture d'occasion en Belgique</h1>
                     <p>Plus de 30 ans d'expérience (depuis 1993). Véhicules contrôlés, garantis et livrés clé en main.<br />Découvrez notre sélection rigoureuse de voitures d'occasion à Meise, Vilvoorde et toute la Belgique.</p>
                     <div className="car-search-box row item3">
                         <div className="col-md-3">
